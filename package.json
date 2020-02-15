@@ -1,0 +1,15 @@
+{
+  "name": "nodejs_rotator",
+  "version": "1.0.0",
+  "description": "A rotating Proxy Server written in node js. It supports http and https. The Proxy which the script connects and is in \"IP:Port\" Format stored in a array.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.2"
+  }
+}
