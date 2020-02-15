@@ -1,3 +1,9 @@
+// The  script here generates random proxies which is updated every 10minutes, you can get a proxy to reuse 
+// in the app.js and index.js in future
+
+// The script here scrapes a sample website (foxnews.com in this case)
+// run node index.js
+
 const request = require('request')
 const cheerio = require('cheerio')
 
@@ -28,12 +34,12 @@ request("https://sslproxies.org/", function(error, response, html) {
   let random_number = Math.floor(Math.random() * 100)
   console.log(random_number)
   let proxy = `http://${ip_addresses[random_number]}:${port_numbers[random_number]}`;
- console.log(proxy);
+  console.log(proxy);
 });
  }
  const options = {
     url:
-      "https://www.google.com/",
+      "https://www.foxnews.com/",
     method: "GET",
     proxy: proxyRotator()
   };
@@ -47,3 +53,7 @@ request("https://sslproxies.org/", function(error, response, html) {
       console.log("Error scraping site, please try again");
     }
   });
+
+module.exports = proxyRotator;
+  
+
