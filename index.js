@@ -27,15 +27,13 @@ request("https://sslproxies.org/", function(error, response, html) {
   console.log("Port Numbers:", port_numbers);
   let random_number = Math.floor(Math.random() * 100)
   console.log(random_number)
-  console.log(ip_addresses[random_number]);
-  console.log(port_numbers[random_number]);
   let proxy = `http://${ip_addresses[random_number]}:${port_numbers[random_number]}`;
  console.log(proxy);
 });
  }
  const options = {
     url:
-      "https://www.foxnews.com/",
+      "https://www.google.com/",
     method: "GET",
     proxy: proxyRotator()
   };
